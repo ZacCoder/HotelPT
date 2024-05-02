@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel CRUD System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Hotel Bookmarked</h1>
+    <form id="hotelForm">
+        <input type="text" id="name" placeholder="Hotel Name" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="number" id="rating" placeholder="Rating" min="1" max="5" required>
+        <button type="submit">Add Hotel</button>
+    </form>
+    <table id="hotelsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="hotelsBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
