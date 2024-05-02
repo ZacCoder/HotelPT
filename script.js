@@ -16,7 +16,7 @@ function createHotelRow(hotel) {
 }
 
 function loadHotels() {
-    fetch('http://localhost:8080/hotels')
+    fetch('https://zaccoder.github.io/hotels')
         .then(response => response.json())
         .then(data => {
             hotelsTable.innerHTML = '';
@@ -35,7 +35,7 @@ form.addEventListener('submit', (e) => {
     const rating = document.getElementById('rating').value;
     const hotelData = { name, location, rating };
 
-    fetch('http://localhost:8080/hotels', {
+    fetch('https://zaccoder.github.io/hotels', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ hotelsTable.addEventListener('click', (e) => {
     
 });
 function deleteHotel(id) {
-    fetch(`http://localhost:8080/hotels/${id}`, {
+    fetch(`https://zaccoder.github.io/${id}`, {
         method: 'DELETE'
     })
     .then(response => {
@@ -80,7 +80,7 @@ function updateHotel(id) {
     const rating = prompt('Enter updated hotel rating:');
     const hotelData = { name, location, rating };
 
-    fetch(`http://localhost:8080/hotels/${id}`, { 
+    fetch(`https://zaccoder.github.io/${id}`, { 
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
